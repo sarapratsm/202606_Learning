@@ -2,7 +2,7 @@
 name: crear-tutorial
 description: >-
   Crea colecciones de "tutoriales" o guías de tecnología siguiendo una metodología fija: una carpeta
-  nueva en la raíz del repositorio de tutoriales (C:\Users\MaccionUser\GitRepos\Learning) con un README
+  nueva en la raíz del repositorio de tutoriales (C:\Users\sprat\Documents\GitRepos\202606_Learning) con un README
   que hace de índice (con enlaces) y guías completas en español, autónomas y dirigidas a perfiles
   backend junior-medio, legibles por cualquiera sin contexto de un proyecto concreto.
   Usa esta skill siempre que la usuaria pida crear, añadir, escribir o documentar un tutorial, una guía,
@@ -25,15 +25,15 @@ Los tutoriales son **autónomos y genéricos**: cualquier persona debe poder lee
 > **Repositorio destino fijo.** Esta skill es **global**: se puede invocar desde cualquier carpeta. Pero **siempre** escribe en el repositorio de tutoriales, sea cual sea el directorio de trabajo actual:
 >
 > ```
-> C:\Users\MaccionUser\GitRepos\Learning
+> C:\Users\sprat\Documents\GitRepos\202606_Learning
 > ```
 >
-> En toda esta guía, `<raíz>` se refiere a esa ruta. **No** crees contenido en el directorio de trabajo actual si es otro distinto. Todas las rutas relativas de ejemplo (`bases-de-datos/…`, `seguridad/…`, etc.) cuelgan de esa raíz, y todas las operaciones de git del paso 7 (`git add`, `commit`, `push`) se ejecutan **dentro de ese repositorio** (por ejemplo con `git -C "C:\Users\MaccionUser\GitRepos\Learning" …` si el directorio de trabajo actual es otro).
+> En toda esta guía, `<raíz>` se refiere a esa ruta. **No** crees contenido en el directorio de trabajo actual si es otro distinto. Todas las rutas relativas de ejemplo (`bases-de-datos/…`, `seguridad/…`, etc.) cuelgan de esa raíz, y todas las operaciones de git del paso 7 (`git add`, `commit`, `push`) se ejecutan **dentro de ese repositorio** (por ejemplo con `git -C "C:\Users\sprat\Documents\GitRepos\202606_Learning" …` si el directorio de trabajo actual es otro).
 
 El repositorio agrupa las colecciones de tutoriales en **carpetas de categoría** en la raíz. Cada tema vive dentro de la categoría a la que pertenece:
 
 ```
-<raíz>/                       ← C:\Users\MaccionUser\GitRepos\Learning
+<raíz>/                       ← C:\Users\sprat\Documents\GitRepos\202606_Learning
 └── <categoria>/             ← carpeta de categoría existente (kebab-case: "devops", "seguridad"...)
     └── <tema>/               ← carpeta nueva (kebab-case: "git-basico", "docker", "patrones-async")
         ├── README.md         ← índice: orden de lectura + enlaces a cada ficha
@@ -227,13 +227,13 @@ Cuando se pida crear uno o varios tutoriales:
    - **El de la categoría**: si el tema es nuevo, enlázalo desde el `README.md` de su categoría; si el tema ya existía pero ha cambiado de alcance, revisa que su descripción siga siendo fiel.
    - **El `README.md` raíz** (`<raíz>/README.md`): revísalo **siempre**, no solo cuando la categoría es nueva. Tiene una descripción de una línea por categoría; si el trabajo que acabas de hacer amplía o cambia lo que esa categoría cubre, actualiza esa línea para que no se quede obsoleta. Si la categoría es nueva, añádele su entrada.
 6. **Verifica los enlaces.** Toda ruta relativa debe resolver (nombre de archivo exacto, mayúsculas incluidas). Ten en cuenta la profundidad: un enlace a un tema de otra categoría necesita `../../`, no `../`.
-7. **Haz commit y push directamente, sin pedir confirmación, si la sesión ha sido satisfactoria.** Cuando el trabajo esté terminado y verificado (todas las fichas creadas, el índice actualizado y los enlaces comprobados), haz `git add` **solo de los ficheros y carpetas que ha tocado esta skill** (nunca `git add -A` ni `git add .`, para no arrastrar cambios ajenos que ya estuvieran en el working tree), un `git commit` con un mensaje descriptivo en español (p. ej. `Añade guía de <tema>`) y un `git push`. **Todos estos comandos de git se ejecutan sobre el repositorio destino `<raíz>`**: si el directorio de trabajo actual es otro, usa `git -C "C:\Users\MaccionUser\GitRepos\Learning" …`. Esta es una instrucción permanente de la usuaria: no hace falta preguntar "¿hago commit y push?" cada vez, el paso 7 ya lo autoriza. Si algo quedó incompleto, falló, la usuaria no está conforme, o el trabajo se hizo en varios subagentes en paralelo y conviene una revisión de conjunto antes de subir, **no** hagas commit ni push: deja los cambios en el working tree y coméntalo explicando por qué.
+7. **Haz commit y push directamente, sin pedir confirmación, si la sesión ha sido satisfactoria.** Cuando el trabajo esté terminado y verificado (todas las fichas creadas, el índice actualizado y los enlaces comprobados), haz `git add` **solo de los ficheros y carpetas que ha tocado esta skill** (nunca `git add -A` ni `git add .`, para no arrastrar cambios ajenos que ya estuvieran en el working tree), un `git commit` con un mensaje descriptivo en español (p. ej. `Añade guía de <tema>`) y un `git push`. **Todos estos comandos de git se ejecutan sobre el repositorio destino `<raíz>`**: si el directorio de trabajo actual es otro, usa `git -C "C:\Users\sprat\Documents\GitRepos\202606_Learning" …`. Esta es una instrucción permanente de la usuaria: no hace falta preguntar "¿hago commit y push?" cada vez, el paso 7 ya lo autoriza. Si algo quedó incompleto, falló, la usuaria no está conforme, o el trabajo se hizo en varios subagentes en paralelo y conviene una revisión de conjunto antes de subir, **no** hagas commit ni push: deja los cambios en el working tree y coméntalo explicando por qué.
 
 ## Checklist final
 
 Antes de dar por terminado:
 
-- [ ] El contenido se ha creado dentro del repositorio destino `<raíz>` (`C:\Users\MaccionUser\GitRepos\Learning`), no en el directorio de trabajo actual si era otro.
+- [ ] El contenido se ha creado dentro del repositorio destino `<raíz>` (`C:\Users\sprat\Documents\GitRepos\202606_Learning`), no en el directorio de trabajo actual si era otro.
 - [ ] El contenido está en una carpeta de tema dentro de la categoría que le corresponde.
 - [ ] Cada ficha está en español, dirigida a un perfil backend junior-medio: sin explicar fundamentos de programación, pero definiendo los términos propios de la tecnología.
 - [ ] Es autónoma: se entiende sin conocer ningún proyecto concreto (sin módulos ni dominios privados).
