@@ -15,6 +15,9 @@ El lado administrativo de GitHub: crear una organización, migrar repositorios d
 ### [CI/CD](ci-cd/README.md)
 Cómo se describe un pipeline y qué herramientas y técnicas llevan el código a producción de forma automática y segura.
 
+### [Dependabot](dependabot/README.md)
+Mantener al día las dependencias sin esfuerzo manual: las tres funciones de Dependabot (alertas, actualizaciones de seguridad y de versiones), cómo configurar `dependabot.yml` para agrupar y silenciar el ruido, qué hacer ante una vulnerabilidad y cómo fusionar automáticamente las actualizaciones seguras desde CI.
+
 ### [Docker](docker/README.md)
 Cómo funciona la contenedorización y cómo escribir y entender un `Dockerfile`.
 

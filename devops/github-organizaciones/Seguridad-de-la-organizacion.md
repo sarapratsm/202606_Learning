@@ -86,6 +86,8 @@ updates:
     schedule: { interval: "weekly" }
 ```
 
+Para profundizar (agrupar pull requests, alertas, fusión automática), consulta la colección [Dependabot](../dependabot/README.md).
+
 El segundo bloque es el que casi nadie pone y el que más valor tiene si has fijado las acciones por SHA: Dependabot actualiza esos SHA por pull request, así que ganas inmutabilidad sin renunciar a las actualizaciones.
 
 ### Secret scanning

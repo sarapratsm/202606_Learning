@@ -46,6 +46,7 @@ Colección personal de guías de tecnología en español, organizadas por catego
 - Git
 - Administración de organizaciones de GitHub (permisos, equipos, rulesets, seguridad y gobierno)
 - CI/CD
+- Dependabot (actualización automática de dependencias, alertas de seguridad y fusión automática)
 - Docker
 - Despliegue en un VPS propio (proxy inverso, HTTPS, backups, VPN)
 - Almacenamiento de objetos con Cloudflare R2
