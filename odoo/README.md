@@ -1,6 +1,6 @@
 # Odoo — Guía de tecnología
 
-Colección introductoria sobre **Odoo** (el ERP de código abierto), organizada en once subcolecciones: los **fundamentos** para entender qué es y cómo está montado (incluida la estructura de datos del ORM, el recordset), las **pruebas seguras** para tocar un sistema en producción sin romperlo, el **desarrollo de búsquedas y filtros** que ve el usuario, las **maneras de configurar parámetros** para no dejar valores clavados en el código, los **mecanismos de notificación** con los que el sistema avisa a las personas, los **botones de acción** con los que una vista dispara código propio sobre un registro concreto, el **systray** con el que se añade un icono propio a la barra de navegación, el **bus de eventos de OWL** con el que dos partes de la interfaz que no se conocen se avisan de un cambio, cómo **contribuir un fix a Odoo o a la OCA** cuando el bug no está en código propio, los **hitos de proyecto** con los que se marcan las entregas y se factura por ellas, y el **frontend** del cliente web (assets, componentes Owl, plantillas QWeb y SCSS). Está escrita para perfiles junior, sin dar por supuesta experiencia previa con Odoo ni con sistemas de gestión.
+Colección introductoria sobre **Odoo** (el ERP de código abierto), organizada en doce subcolecciones: los **fundamentos** para entender qué es y cómo está montado (incluida la estructura de datos del ORM, el recordset), las **pruebas seguras** para tocar un sistema en producción sin romperlo, el **desarrollo de búsquedas y filtros** que ve el usuario, las **maneras de configurar parámetros** para no dejar valores clavados en el código, los **mecanismos de notificación** con los que el sistema avisa a las personas, los **botones de acción** con los que una vista dispara código propio sobre un registro concreto, el **systray** con el que se añade un icono propio a la barra de navegación, el **bus de eventos de OWL** con el que dos partes de la interfaz que no se conocen se avisan de un cambio, cómo **contribuir un fix a Odoo o a la OCA** cuando el bug no está en código propio, los **hitos de proyecto** con los que se marcan las entregas y se factura por ellas, la **integración con sistemas externos** (API externa, endpoints REST propios, llamadas salientes y manejo robusto de errores), y el **frontend** del cliente web (assets, componentes Owl, plantillas QWeb y SCSS). Está escrita para perfiles junior, sin dar por supuesta experiencia previa con Odoo ni con sistemas de gestión.
 
 Cada subcolección tiene su propio índice con orden de lectura. Si empiezas de cero, recórrelas en el orden de abajo.
 
@@ -121,6 +121,18 @@ La parte del cliente web que se ejecuta en el navegador: estructura de un módul
 | 35 | [Componentes OWL](frontend-js/Componentes-OWL.md) | Clase, estado reactivo, props, ciclo de vida y servicios de Odoo. |
 | 36 | [Plantillas QWeb de cliente](frontend-js/Plantillas-QWeb-de-Cliente.md) | El lenguaje de plantillas de cada componente y cómo heredar una existente. |
 | 37 | [SCSS y clases CSS](frontend-js/SCSS-y-Clases-CSS.md) | Estilos acotados, y cómo resolver los choques con Bootstrap y con Odoo. |
+
+### 12. [Integración con sistemas externos](integracion-con-sistemas-externos/README.md)
+
+Cómo conectar Odoo con otros sistemas en las dos direcciones —que otros llamen a Odoo y que Odoo llame a otros— y cómo hacerlo de forma robusta: credenciales acotadas, reintentos, idempotencia y cola de pendientes.
+
+| # | Archivo | Por qué leerlo aquí |
+|---|---|---|
+| 38 | [API externa de Odoo](integracion-con-sistemas-externos/API-Externa-de-Odoo.md) | La puerta que Odoo ya trae: JSON-2 y la clásica XML-RPC, con ejemplos de lectura y escritura. |
+| 39 | [Claves de API y usuarios de integración](integracion-con-sistemas-externos/Claves-de-API-y-Usuarios-de-Integracion.md) | Autenticar una integración sin usar la contraseña de nadie y con permisos mínimos. |
+| 40 | [Endpoints REST con controladores](integracion-con-sistemas-externos/Endpoints-REST-con-Controladores.md) | Tu propio contrato y webhooks: controladores, autenticación y códigos HTTP. |
+| 41 | [Llamar a APIs externas desde Odoo](integracion-con-sistemas-externos/Llamar-a-APIs-Externas-desde-Odoo.md) | Tiempos límite, reintentos y por qué una llamada externa no se deshace con el rollback. |
+| 42 | [Manejo de errores en integraciones](integracion-con-sistemas-externos/Manejo-de-Errores-en-Integraciones.md) | Clasificar errores, idempotencia, cola de pendientes y qué hacer con lo fallido. |
 
 ---
 

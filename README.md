@@ -82,6 +82,7 @@ Colección personal de guías de tecnología en español, organizadas por catego
 - Bus de eventos de OWL (env.bus) para reactividad e intercomunicación de componentes
 - Flujo de contribución de fixes al núcleo de Odoo y módulos de OCA
 - Hitos de proyecto, entregables y facturación
+- Integración con sistemas externos (API externa JSON-2/XML-RPC, claves de API, endpoints REST con controladores, llamadas salientes y manejo robusto de errores)
 
 ### [Herramientas y sistemas](herramientas/README.md)
 - Correo transaccional
