@@ -24,6 +24,7 @@ Colección personal de guías de tecnología en español, organizadas por catego
 - Imágenes y derechos de autor (licencias, bancos gratuitos y buenas prácticas al publicar)
 - Efecto parallax con CSS (historia y técnicas)
 - Integración de un manual de usuario dentro de una app React
+- Eventos del DOM (jerarquía Event, UIEvent, MouseEvent y PointerEvent, y filtrado por botón)
 
 ### [Lenguajes y runtimes](lenguajes/README.md)
 - Fundamentos de C# y .NET (lenguaje, runtime, MSBuild y NuGet)

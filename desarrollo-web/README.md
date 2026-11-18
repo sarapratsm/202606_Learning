@@ -21,6 +21,9 @@ El efecto de profundidad al hacer scroll, con su contexto e historia (de la astr
 ### [Manual de usuario dentro de una app web](manual-de-usuario-en-la-app/README.md)
 Cómo integrar el manual de usuario en una app React: Markdown convertido a HTML en build-time, `dangerouslySetInnerHTML` y XSS, i18n con claves, índice con scroll-spy, modal con zoom y arrastre, capturas automáticas con Playwright y exportación a Word con `python-docx`.
 
+### [Eventos del DOM](eventos-del-dom/README.md)
+La jerarquía de los objetos de evento del navegador (`Event` → `UIEvent` → `MouseEvent` → `PointerEvent`): por qué un `PointerEvent` puede leerse como un `MouseEvent`, cómo se interpreta la notación de MDN, `instanceof`, `pointerType` y cómo reaccionar solo al botón del ratón que interesa con un *early return*.
+
 ---
 
 ## Criterios de calidad de una web
