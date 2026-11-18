@@ -41,6 +41,7 @@ Colección personal de guías de tecnología en español, organizadas por catego
 - Testing en .NET (xUnit, Shouldly, NSubstitute)
 - Fixtures y configuración de pruebas
 - Testcontainers y pruebas de integración
+- Testing end-to-end (E2E) con Playwright
 - Metodologías guiadas por pruebas y especificaciones (TDD, BDD y SDD)
 
 ### [DevOps y control de versiones](devops/README.md)
@@ -91,3 +92,12 @@ Colección personal de guías de tecnología en español, organizadas por catego
 - Context engineering (diseño, optimización y gestión del contexto en prompts)
 - Modelos de difusión para generación de imagen
 - Control estructural con ControlNet (preprocesadores, pesos, ventanas de control y multi-ControlNet)
+
+---
+
+## Otros contenidos del repositorio
+
+- [Configuración de Claude Code](claude/README.md): copia de la configuración personal (instrucciones, ajustes, línea de estado y memoria).
+- [Skill `crear-tutorial`](skills/crear-tutorial/SKILL.md): metodología para añadir nuevas guías a este repositorio.
+- [PENDIENTES.md](PENDIENTES.md): temas que aún no están escritos.
+- [REESCRITURA.md](REESCRITURA.md): documento de trabajo de la conversión de las colecciones al formato de guía completa.
