@@ -16,5 +16,8 @@ El recorrido completo en dos frentes: programar con IA (agentes de codificación
 ### [Context Engineering](context-engineering/README.md)
 Cómo diseñar y gestionar todo lo que recibe un LLM en cada llamada: ventana de contexto, RAG, memoria de agentes, compactación, aislamiento entre agentes y caché de *prompt*.
 
+### [Ollama](ollama/README.md)
+Cómo ejecutar modelos de lenguaje en tu propio equipo y usarlos desde código: instalar Ollama, llamar a su API REST (chat, opciones, esquema JSON), y elegir modelo según parámetros, cuantización y memoria; incluye la trampa del contexto que se recorta en silencio.
+
 ### [ControlNet](controlnets/README.md)
 Imagen generativa: cómo funciona un modelo de difusión (latente, denoising, VAE, semilla, guidance scale) y cómo imponerle una estructura concreta con ControlNet — el catálogo de preprocesadores, la calibración del peso y la ventana de control, y cómo apilar varios sin degradar el resultado.

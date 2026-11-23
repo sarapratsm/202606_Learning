@@ -91,6 +91,7 @@ Colección personal de guías de tecnología en español, organizadas por catego
 - Ingeniería con LLMs (desarrollo asistido con agentes de código, plugins y marketplaces)
 - Construcción de software con modelos (APIs, tool use, sistemas multiagente, MCP, evaluaciones, costes y seguridad)
 - Context engineering (diseño, optimización y gestión del contexto en prompts)
+- Ollama (modelos de lenguaje locales: instalación, API REST, elección de modelo y rendimiento)
 - Modelos de difusión para generación de imagen
 - Control estructural con ControlNet (preprocesadores, pesos, ventanas de control y multi-ControlNet)
 
