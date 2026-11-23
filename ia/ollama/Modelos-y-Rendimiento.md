@@ -76,12 +76,46 @@ ollama run extractor-pedidos
 
 Es útil para repartir una configuración probada dentro de un equipo. Para una aplicación, suele ser más claro pasar `options` y el mensaje `system` en cada petición: la configuración queda visible en tu código en vez de escondida en un modelo local.
 
+## Dónde se guardan los modelos en disco
+
+Cada modelo que descargas ocupa varios gigas, así que conviene saber dónde van a parar. Ollama los guarda en una carpeta `models` dentro de su directorio de datos:
+
+| Sistema | Ruta por defecto |
+|---|---|
+| Windows | `C:\Users\<usuario>\.ollama\models` |
+| macOS | `~/.ollama/models` |
+| Linux (ejecutado como tu usuario) | `~/.ollama/models` |
+| Linux (instalado como servicio systemd) | `/usr/share/ollama/.ollama/models` |
+
+Dentro verás estas subcarpetas:
+
+| Carpeta | Contenido |
+|---|---|
+| `blobs/` | Los ficheros pesados: los pesos del modelo y otras piezas (plantilla, parámetros). Se nombran por su huella, `sha256-...`, y es donde se va casi todo el espacio. |
+| `manifests/` | Formato clásico de manifiestos: un pequeño fichero por modelo y etiqueta que lista qué blobs lo componen. Cuelga de `registry.ollama.ai`. |
+| `manifests-v2/` | Formato más reciente de los mismos manifiestos, que cuelga de `ollama.com`. |
+| `metadata/` | Un `.json` por blob con información adicional sobre él. |
+
+Que `manifests-v2/` y `metadata/` aparezcan o no depende de la versión de Ollama; si faltan, no pasa nada. La idea es la misma que en un registro de contenedores: los **blobs** se identifican por su contenido y se comparten (dos modelos con la misma plantilla guardan una sola copia), y el **manifiesto** es la lista que dice qué blobs forman cada modelo. Por eso no debes borrar ficheros de `blobs/` a mano: usa `ollama rm <modelo>`, que retira el manifiesto y los blobs que ya nadie usa.
+
+### Cambiar la ubicación
+
+Si el disco del sistema va justo, mueve los modelos con la variable de entorno `OLLAMA_MODELS`:
+
+1. Cierra Ollama.
+2. Copia **las cuatro subcarpetas** de la ruta antigua a la nueva (los manifiestos sin sus blobs, o al revés, dejan los modelos inservibles).
+3. Define `OLLAMA_MODELS` con la ruta nueva: en Windows, en las variables de entorno del usuario; en Linux con systemd, con `systemctl edit ollama` y una línea `Environment="OLLAMA_MODELS=/ruta/nueva"`.
+4. Arranca Ollama de nuevo y comprueba con `ollama list` que los modelos siguen ahí.
+
+En Linux con servicio, el usuario `ollama` debe poder leer y escribir en la carpeta nueva.
+
 ## Errores frecuentes
 
 - **Descargar el modelo más grande "porque seguro que es mejor":** si no cabe, irá peor que uno mediano que sí cabe. Empieza por 7-8B y sube solo si la calidad no basta.
 - **Medir velocidad con la primera llamada:** incluye la carga del modelo. Mide desde la segunda.
 - **Subir `num_ctx` sin mirar la memoria:** un contexto mayor consume más memoria; con un modelo ya justo, puede expulsarlo de la GPU y hundir la velocidad.
 - **Ejecutar dos modelos a la vez en un equipo justo:** se disputan la memoria y ambos se ralentizan; `ollama ps` lo muestra.
+- **Quedarse sin disco sin saber por qué:** los modelos viven en `models/blobs`. Revisa `ollama list` y elimina los que no uses con `ollama rm`.
 
 ## Buenas prácticas avanzadas
 

@@ -12,7 +12,7 @@ Está pensada para perfiles backend que ya han llamado a alguna API de LLM en la
 |---|---|---|
 | 1 | [Ollama](Ollama.md) | Qué es, cómo instalarlo y los comandos del día a día. Punto de partida para tener un modelo funcionando. |
 | 2 | [La API REST de Ollama](API-REST-de-Ollama.md) | Cómo llamar al modelo desde tu código: chat, opciones, respuestas con esquema JSON y errores típicos. |
-| 3 | [Modelos y rendimiento](Modelos-y-Rendimiento.md) | Cómo elegir el modelo y qué hacer cuando va lento: parámetros, cuantización, GPU, memoria y `keep_alive`. |
+| 3 | [Modelos y rendimiento](Modelos-y-Rendimiento.md) | Cómo elegir el modelo y qué hacer cuando va lento: parámetros, cuantización, GPU, memoria, `keep_alive` y dónde se guardan los modelos en disco. |
 
 ---
 
